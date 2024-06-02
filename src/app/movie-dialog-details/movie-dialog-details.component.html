@@ -1,0 +1,36 @@
+<div class="dialog-container">
+  <h1 mat-dialog-title>{{ data.item.title }}</h1>
+  <div mat-dialog-content>
+    <p>
+      <label><b>Overview : </b></label>
+      {{ data.item.overview }}
+
+      <br> <br>
+
+      <label><b>Language : </b></label>
+      {{ data.item.original_language }}
+
+      <br> <br>
+
+      <label><b>Release date : </b></label>
+      {{ data.item.release_date }}
+
+      <br>
+    </p>
+    <label><b>Reviews: </b></label>
+    <br>
+    <br>
+    <app-review-table [isLoading]="isLoadingReviewTable" [items]="reviews"></app-review-table>
+
+    <br>
+    <label><b>Reviews analysis: </b></label>
+    <br>
+    <br>
+    <app-review-extended-data [isLoading]="isLoadingReviewTable" [items]="extended_review_data"></app-review-extended-data>
+
+    
+  </div>
+  <div mat-dialog-actions>
+    <button mat-button mat-dialog-close>Close</button>
+  </div>
+</div>

@@ -1,0 +1,28 @@
+<ng-container>
+  <mat-icon big-icon class="fc-primary">movie</mat-icon>
+
+  <p class="fs-32">Results Movie</p>
+
+  <main>
+    <mat-progress-bar value="25"></mat-progress-bar>
+    <p class="fs-20">The recommended movies for you</p>
+    <br>
+    <div>
+      <div class="movie-rec">
+        <div *ngIf="data" class="cards-container">
+          <mat-card *ngFor="let item of data; let i = index" class="custom-card" (click)="OnMatCardClickEvent(item)">
+              <mat-card-header>
+                  <div class="card-header-content">
+                      <h2>{{item.title}}</h2>
+                  </div>
+              </mat-card-header>
+              <mat-card-content>
+                  <img *ngIf="item.poster_path" src="https://image.tmdb.org/t/p/original{{ item.poster_path }}" alt="Photo">
+                  <img *ngIf="!item.poster_path" src="../../assets/images/NoImageFound.png">
+              </mat-card-content>
+          </mat-card>
+      </div>
+        </div>
+      </div>
+  </main>
+</ng-container>

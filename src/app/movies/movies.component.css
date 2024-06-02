@@ -1,0 +1,59 @@
+:host {
+    text-align: center;
+    display: block;
+    margin: 30px auto;
+    width: 50%;
+    background: white;
+    padding: 25px 2%;
+    box-shadow: 0px 1px 2px 1px #80808082;
+    border-radius: 5px;
+    min-height: 80vh;
+}
+
+.movie-rec{
+    margin-bottom: 6%;
+    margin-top: 6%;
+}
+
+.fc-primary {
+    color: #03a9f4;
+}
+
+p {
+    margin: 5px 0;
+}
+
+.fs-20 {
+    font-size: 20px;
+}
+
+[big-icon] {
+    transform: scale(1.7);
+    margin: 15px 0;
+}
+main{
+    padding: 0 10%;
+}
+mat-progress-bar {
+    text-align: initial;
+    margin: 25px 0 40px;
+}
+
+form {
+    text-align: initial;
+    margin: 0 12%;
+
+    mat-form-field {
+        min-width: 100%;
+    }
+}
+
+.button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .spinner-container {
+    margin-top: 10px; /* Adjust as needed */
+  }

@@ -1,0 +1,32 @@
+.example-header-image {
+    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+    background-size: cover;
+  }
+
+.cards-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 20px; /* Adds some padding around the container */
+  }
+  
+.example-card {
+    flex: 1 1 30%; /* Adjust the flex properties to allow for larger cards */
+    margin: 8px; /* Keeps some space between the cards */
+    min-width: 300px; /* Ensures a minimum width for the cards */
+    /*max-width: 400px;  Optional: sets a larger maximum width for the cards */
+  }
+
+  .list-item {
+    display: flex;
+    align-items: center;
+  }
+  
+  .item-key {
+    flex: 1; /* Takes up available space */
+    font-weight: bold; /* Example styling for key */
+  }
+  
+  .item-value {
+    margin-left: auto; /* Moves the value to the right side */
+  }

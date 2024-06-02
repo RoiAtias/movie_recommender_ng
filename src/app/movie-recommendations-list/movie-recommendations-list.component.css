@@ -1,0 +1,114 @@
+/* photo-gallery.component.css */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .gallery img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  .gallery .column {
+    flex: 1 1 calc(25% - 10px); /* 4 images per row with some space in between */
+    margin: 5px;
+  }
+
+  :host {
+    text-align: center;
+    display: block;
+    margin: 30px auto;
+    width: 50%;
+    background: white;
+    padding: 25px 2%;
+    box-shadow: 0px 1px 2px 1px #80808082;
+    border-radius: 5px;
+    min-height: 80vh;
+}
+
+.movie-rec{
+    margin-bottom: 6%;
+    margin-top: 6%;
+}
+
+.fc-primary {
+    color: #03a9f4;
+}
+
+p {
+    margin: 5px 0;
+}
+
+.fs-20 {
+    font-size: 20px;
+}
+
+[big-icon] {
+    transform: scale(1.7);
+    margin: 15px 0;
+}
+main{
+    padding: 0 10%;
+}
+mat-progress-bar {
+    text-align: initial;
+    margin: 25px 0 40px;
+}
+
+form {
+    text-align: initial;
+    margin: 0 12%;
+
+    mat-form-field {
+        min-width: 100%;
+    }
+}
+.cards-container {
+    display: flex;
+    flex-wrap: wrap; /* Allow the cards to wrap to the next line if necessary */
+    gap: 20px; /* Space between the cards */
+    justify-content: flex-start; /* Align cards to the start of the container */
+}
+
+.custom-card {
+    flex: 1 1 calc(20% - 20px); /* Adjust the width of the cards, including the gap */
+   /* max-width: calc(20% - 20px); /* Ensure the cards don't exceed a certain width */
+    margin: 10px; /* Margin for spacing around each card */
+    box-sizing: border-box; /* Ensure padding and border are included in the total width and height */
+}
+
+.custom-card img {
+    width: 70%; /* Make the image take the full width of the card */
+    height: 95%; /* Maintain the aspect ratio */
+}
+
+.card-header-content {
+    display: flex;
+    justify-content: space-between; /* Align the title and number on the same line */
+    align-items: center;
+    width: 100%; /* Ensure the header content spans the full width */
+}
+
+.card-header-content h2 {
+    font-size: 1.2em; /* Adjust the font size as needed */
+    margin: 0; /* Remove default margin */
+}
+
+.card-number {
+    font-size: 1em; /* Adjust the font size as needed */
+    background-color: #f0f0f0; /* Background color for the number */
+    padding: 5px 10px; /* Padding for the number */
+    border-radius: 5px; /* Rounded corners for the number */
+}
+mat-card-header {
+    height: 15%;
+}
+mat-card-content {
+    display: flex;
+    justify-content: center; /* Center the image horizontally */
+    align-items: center; /* Center the image vertically */
+    padding: 10px; /* Padding around the content */
+}
+

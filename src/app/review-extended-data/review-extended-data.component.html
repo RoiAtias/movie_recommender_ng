@@ -1,0 +1,70 @@
+<div class="cards-container">
+  <mat-card *ngIf="items != null && items.positive_common_words" class="example-card">
+    <mat-card-header>
+      <mat-card-title>Positive reviews ( {{ items.positive_reviews_length}} )</mat-card-title>
+      <mat-card-subtitle *ngIf="word_cloud_url_positive" >Word Cloud</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image *ngIf="word_cloud_url_positive" [src]="word_cloud_url_positive" alt="Word Cloud">
+    <mat-card-content>
+      <p *ngIf="word_cloud_url_positive">
+        <br>
+        POSITIVE - Words with the biggest contribution in Sentiment:
+        <br>
+        <mat-list>
+          <ng-container *ngFor="let item of positive_common_words_sorted ; let last = last">
+            <mat-list-item class="list-item">
+              <div><span class="item-key">{{ item[0] }} </span> -  <span class="item-value">{{ item[1] }}</span></div>
+            </mat-list-item>
+            <mat-divider *ngIf="!last"></mat-divider>
+          </ng-container>
+        </mat-list>
+      </p>
+    </mat-card-content>
+  </mat-card>
+
+  <mat-card *ngIf="items != null && items.neutral_common_words" class="example-card">
+    <mat-card-header>
+      <mat-card-title>Neutral reviews ( {{ items.neutral_reviews_length}} )</mat-card-title>
+      <mat-card-subtitle *ngIf="word_cloud_url_neutral" >Word Cloud</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image *ngIf="word_cloud_url_neutral" [src]="word_cloud_url_neutral" alt="Word Cloud">
+    <mat-card-content>
+      <p *ngIf="word_cloud_url_neutral">
+        <br>
+        NEUTRAL - Words with the biggest contribution in Sentiment:
+        <br>
+        <mat-list>
+          <ng-container *ngFor="let item of neutral_common_words_sorted ; let last = last">
+            <mat-list-item class="list-item">
+              <div><span class="item-key">{{ item[0] }} </span> -  <span class="item-value">{{ item[1] }}</span></div>
+            </mat-list-item>
+            <mat-divider *ngIf="!last"></mat-divider>
+          </ng-container>
+        </mat-list>
+      </p>
+    </mat-card-content>
+  </mat-card>
+
+  <mat-card *ngIf="items != null && items.negative_common_words" class="example-card">
+    <mat-card-header>
+      <mat-card-title>Negative reviews ( {{ items.negative_reviews_length}} )</mat-card-title>
+      <mat-card-subtitle *ngIf="word_cloud_url_negative">Word Cloud</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image *ngIf="word_cloud_url_negative" [src]="word_cloud_url_negative" alt="Word Cloud">
+    <mat-card-content>
+      <p *ngIf="word_cloud_url_negative">
+        <br>
+        NAGATIVE - Words with the biggest contribution in Sentiment:
+        <br>
+        <mat-list>
+          <ng-container *ngFor="let item of negative_common_words_sorted ; let last = last">
+            <mat-list-item class="list-item">
+              <div><span class="item-key">{{ item[0] }} </span> -  <span class="item-value">{{ item[1] }}</span></div>
+            </mat-list-item>
+          <mat-divider *ngIf="!last"></mat-divider>
+        </ng-container>
+        </mat-list>
+      </p>
+    </mat-card-content>
+  </mat-card>
+</div>

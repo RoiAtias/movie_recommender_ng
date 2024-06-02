@@ -1,0 +1,25 @@
+/* my-dialog.component.css */
+.dialog-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  
+  h1.mat-dialog-title {
+    flex: 0 0 auto;
+  }
+  
+  div[mat-dialog-content] {
+    flex: 1 1 auto;
+    overflow: auto;
+  }
+  
+  div[mat-dialog-actions] {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .mat-mdc-dialog-content {
+    max-height: none !important;
+}
+  
